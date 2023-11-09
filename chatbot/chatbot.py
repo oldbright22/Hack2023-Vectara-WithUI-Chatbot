@@ -40,13 +40,18 @@ class MaverickChatbot:
         try:
 
             # Get the values from environment variables
-            customer_id = os.getenv("CUSTOMER_ID")
-            x_api_key = os.getenv("VECTARA_API_KEY")
-            customerid = os.getenv("CUSTOMERID")
-            vectara_token = os.getenv("TOKEN")
-            corpusid = os.getenv("CORPUSID")
+            #customer_id = os.getenv("CUSTOMER_ID")
+            #x_api_key = os.getenv("VECTARA_API_KEY")
+            #customerid = os.getenv("CUSTOMERID")
+            #vectara_token = os.getenv("TOKEN")
+            #corpusid = os.getenv("CORPUSID")
 
-
+            customer_id = st.secrets("CUSTOMER_ID")
+            x_api_key = st.secrets("VECTARA_API_KEY")
+            customerid = st.secrets("CUSTOMERID")
+            vectara_token = st.secrets("TOKEN")
+            corpusid = st.secrets("CORPUSID")            
+            
             url = 'https://api.vectara.io/v1/query'
 
 
