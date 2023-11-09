@@ -146,4 +146,4 @@ class MaverickChatbot:
 
             
         except:
-            return "EXCEPTION - No response available at this time full response1 {response1}  response-code1 = {response1.status_code}  - text {text} full response {response}  response-code = {response.status_code}  chatbot response = {error_response}"
+            return f"EXCEPTION - No response available at this time full response1 {response1}  response-code1 = {response1.status_code}  - text {text} full response {response}  response-code = {response.status_code}  chatbot response = {error_response}"
