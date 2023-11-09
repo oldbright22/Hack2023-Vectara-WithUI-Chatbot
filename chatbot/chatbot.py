@@ -112,10 +112,10 @@ class MaverickChatbot:
                         #print("Extracted Text:")
                         #print(text)
                 else:
-                    return "No results were found for the query."
+                    return "1ST -- No results were found for the query."
                     #print("No results were found for the query.")
             else:
-                return f"Request failed with status code: {response.status_code}"
+                return f"2ND -- Request failed with status code: {response.status_code}"
                 #print(f"Request failed with status code: {response.status_code}")
 
 
@@ -141,7 +141,7 @@ class MaverickChatbot:
                 #print("Chatbot Response:")
                 #print(chatbot_response)
             else:
-                return f"Request failed with status code: {response.status_code}"
+                return f"4th -- Request failed with status code: {response.status_code}"
                 #print(f"Request failed with status code: {response.status_code}")
                                                     
             return chatbot_response
