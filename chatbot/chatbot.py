@@ -96,9 +96,9 @@ class MaverickChatbot:
         
         
             #Perform API call - POST towards  
-            response = requests.post(url, headers=headers, json=data)
+            response1 = requests.post(url, headers=headers, json=data)
 
-            if response.status_code == 200:
+            if response1.status_code == 200:
                 response_json = response.json()
 
                 # Check if results are available
@@ -114,7 +114,7 @@ class MaverickChatbot:
                     return "1ST -- No results were found for the query."
                     #print("No results were found for the query.")
             else:
-                return f"2ND -- Request failed with status code: {response.status_code}"
+                return f"2ND -- Request failed with status code: {response1.status_code}"
                 #print(f"Request failed with status code: {response.status_code}")
 
 
@@ -146,4 +146,4 @@ class MaverickChatbot:
 
             
         except:
-            return "EXCEPTION - No response available at this time - chatbot response = {error_response}"
+            return "EXCEPTION - No response available at this time full response1 {response1}  response-code1 = {response1.status_code}  - text {text} full response {response}  response-code = {response.status_code}  chatbot response = {error_response}"
