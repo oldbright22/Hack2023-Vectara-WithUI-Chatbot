@@ -21,7 +21,6 @@ import streamlit as st
 
 
 
-
 class MaverickChatbot:
     
     def __init__(self):
