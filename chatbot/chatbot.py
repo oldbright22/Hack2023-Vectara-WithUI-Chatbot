@@ -47,11 +47,17 @@ class MaverickChatbot:
             #madeitthisfar = f"(4) {st.secrets("VTOKEN")} " 
             #madeitthisfar = f"(5) {st.secrets("CORPUSID")} "
 
-            CUSTOMER_ID = st.secrets("CUSTOMER_ID")
-            X_API_KEY = st.secrets("X_API_KEY")
-            CUSTOMERID = st.secrets("CUSTOMERID")
-            VTOKEN = st.secrets("VTOKEN")
-            CORPUSID = st.secrets("CORPUSID")            
+            #CUSTOMER_ID = st.secrets("CUSTOMER_ID")
+            #X_API_KEY = st.secrets("X_API_KEY")
+            #CUSTOMERID = st.secrets("CUSTOMERID")
+            #VTOKEN = st.secrets("VTOKEN")
+            #CORPUSID = st.secrets("CORPUSID")    
+
+            CUSTOMER_ID='1504889343'
+            X_API_KEY='zwt_WbLJ_75_cAIQMVUwidldtQ719dm81pKdkMWn2A'
+            CUSTOMERID=1504889343
+            VTOKEN='esecret_4fvbprd1pf4t1fziay6fpz1elg'
+            CORPUSID=2        
 
             madeitthisfar = f"(1){CUSTOMER_ID} (2) {X_API_KEY} (3) {CUSTOMERID} (4) {VTOKEN} (5) {CORPUSID} "
 
