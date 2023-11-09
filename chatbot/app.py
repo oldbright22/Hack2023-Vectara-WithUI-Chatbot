@@ -3,7 +3,7 @@ from streamlit_chat import message
 from streamlit_extras.colored_header import colored_header
 from chatbot import MaverickChatbot
 
-st.set_page_config(page_title="Doctor Consultant", page_icon='💬')
+st.set_page_config(page_title="Doctor CancerCare Companion Consultant", page_icon='💬')
 
 with st.sidebar:
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/4c/Hackathon-llm-2023.png")
@@ -43,7 +43,7 @@ def get_text():
 
 
 with input_container:
-    st.markdown("💬 Welcome my name is Kamal, I'm an Doctor assistant, how can I help you ?")
+    st.markdown("💬 Welcome my name is Kamal, I'm cancercare companion, how can I help you ?")
     user_input = get_text()
 
 
