@@ -133,14 +133,17 @@ class MaverickChatbot:
 
             response = s.post(url, headers={"Authorization": f"Bearer {token}"}, json=body)
 
+            error_response = ""
             if response.status_code == 200:
                 response_json = response.json()
                 chatbot_response = response_json["choices"][0]["message"]["content"]
-                print("Chatbot Response:")
+                #print("Chatbot Response:")
+                error_response = chatbot_response
                 return chatbot_response
             else:
                 return f"4th -- Request failed with status code: {response.status_code}"
                 #print(f"Request failed with status code: {response.status_code}")
 
+            
         except:
-            return "EXCEPTION - No response available at this time"
+            return "EXCEPTION - No response available at this time - chatbot response = {error_response}"
