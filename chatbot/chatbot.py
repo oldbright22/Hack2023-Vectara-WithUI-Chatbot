@@ -95,7 +95,7 @@ class MaverickChatbot:
             }
         
         
-            #Perform API call - POST towards  
+            #Perform API call - POST towards  VECTARA DB  
             response1 = requests.post(url, headers=headers, json=data)
 
             if response1.status_code == 200:
