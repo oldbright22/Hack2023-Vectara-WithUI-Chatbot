@@ -1,0 +1,11 @@
+langchain
+huggingface_hub
+watermark
+requests
+pinecone_client
+python-dotenv
+streamlit_chat
+streamlit_extras
+openai
+tiktoken
+os
