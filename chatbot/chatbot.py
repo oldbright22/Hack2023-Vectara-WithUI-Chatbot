@@ -19,11 +19,11 @@ import requests
 from dotenv import find_dotenv, load_dotenv
 import streamlit as st
 
-customer_id = st.secrets("CUSTOMER_ID")
-x_api_key = st.secrets("VECTARA_API_KEY")
-customerid = st.secrets("CUSTOMERID")
-vectara_token = st.secrets("TOKEN")
-corpusid = st.secrets("CORPUSID")            
+CUSTOMER_ID = st.secrets("CUSTOMER_ID")
+X_API_KEY = st.secrets("X_API_KEY")
+CUSTOMERID = st.secrets("CUSTOMERID")
+VTOKEN = st.secrets("TOKEN")
+CORPUSID = st.secrets("CORPUSID")            
 
 class MaverickChatbot:
     
@@ -46,14 +46,17 @@ class MaverickChatbot:
             #vectara_token = os.getenv("TOKEN")
             #corpusid = os.getenv("CORPUSID")
            
+
+            madeitthisfar = f"(1){CUSTOMER_ID} (2) {X_API_KEY} (3) {CUSTOMERID} (4) {VTOKEN} (5) {CORPUSID} "
+
             url = 'https://api.vectara.io/v1/query'
 
 
             headers = {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
-                'customer-id': customer_id,
-                'x-api-key': x_api_key
+                'customer-id': CUSTOMER_ID,
+                'x-api-key': X_API_KEY
             }
 
 
@@ -65,8 +68,8 @@ class MaverickChatbot:
                         "numResults": 5,
                         "corpusKey": [
                             {
-                                "customerId": customerid,
-                                "corpusId": corpusid,
+                                "customerId": CUSTOMERID,
+                                "corpusId": CORPUSID,
                                 "semantics": "DEFAULT",
                                 "dim": [
                                     {
@@ -126,7 +129,7 @@ class MaverickChatbot:
             madeitthisfar = "prior to LLM call"
             #api_base = os.getenv("ANYSCALE_API_BASE")
             api_base = "https://api.endpoints.anyscale.com/v1"
-            token = vectara_token 
+            token = VTOKEN
             url = f"{api_base}/chat/completions"
             body = {
                     "model": "meta-llama/Llama-2-70b-chat-hf",
