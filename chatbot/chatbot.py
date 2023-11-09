@@ -41,11 +41,11 @@ class MaverickChatbot:
             #vectara_token = os.getenv("TOKEN")
             #corpusid = os.getenv("CORPUSID")
 
-            madeitthisfar = f"(1) {st.secrets("CUSTOMER_ID")} "
-            madeitthisfar = f"(2) {st.secrets("X_API_KEY")} " 
-            madeitthisfar = f"(3) {st.secrets("CUSTOMERID")} "
-            madeitthisfar = f"(4) {st.secrets("VTOKEN")} " 
-            madeitthisfar = f"(5) {st.secrets("CORPUSID")} "
+            #madeitthisfar = f"(1) {st.secrets("CUSTOMER_ID")} "
+            #madeitthisfar = f"(2) {st.secrets("X_API_KEY")} " 
+            #madeitthisfar = f"(3) {st.secrets("CUSTOMERID")} "
+            #madeitthisfar = f"(4) {st.secrets("VTOKEN")} " 
+            #madeitthisfar = f"(5) {st.secrets("CORPUSID")} "
 
             CUSTOMER_ID = st.secrets("CUSTOMER_ID")
             X_API_KEY = st.secrets("X_API_KEY")
