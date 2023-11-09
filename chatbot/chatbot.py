@@ -22,7 +22,7 @@ import streamlit as st
 CUSTOMER_ID = st.secrets("CUSTOMER_ID")
 X_API_KEY = st.secrets("X_API_KEY")
 CUSTOMERID = st.secrets("CUSTOMERID")
-VTOKEN = st.secrets("TOKEN")
+VTOKEN = st.secrets("VTOKEN")
 CORPUSID = st.secrets("CORPUSID")            
 
 class MaverickChatbot:
