@@ -138,11 +138,10 @@ class MaverickChatbot:
                 chatbot_response = response_json["choices"][0]["message"]["content"]
                 print("Chatbot Response:")
                 print(chatbot_response)
+                return chatbot_response
             else:
                 return f"4th -- Request failed with status code: {response.status_code}"
                 #print(f"Request failed with status code: {response.status_code}")
-                                                    
-            return chatbot_response
 
         except:
             return None
