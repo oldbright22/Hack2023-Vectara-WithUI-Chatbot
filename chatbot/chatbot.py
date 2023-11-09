@@ -33,6 +33,8 @@ class MaverickChatbot:
         """
         try:
 
+
+            madeitthisfar = "begin"
             # Get the values from environment variables
             #customer_id = os.getenv("CUSTOMER_ID")
             #x_api_key = os.getenv("VECTARA_API_KEY")
@@ -95,9 +97,11 @@ class MaverickChatbot:
             }
         
         
+            madeitthisfar = "prior to api call - vectara"
             #Perform API call - POST towards  VECTARA DB  
             response1 = requests.post(url, headers=headers, json=data)
 
+            madeitthisfar = "after to api call - vectara"
             if response1.status_code == 200:
                 response_json = response.json()
 
@@ -108,6 +112,7 @@ class MaverickChatbot:
                     ##############################################################################################################################
                     for result in response_json["responseSet"][0]["response"]:
                         text = result.get("text", "")
+                        madeitthisfar = "got a text narrow down from vectara"
                         #print("Extracted Text:")
                         #print(text)
                 else:
@@ -120,6 +125,7 @@ class MaverickChatbot:
 
             s = requests.Session()
 
+            madeitthisfar = "prior to LLM call"
             #api_base = os.getenv("ANYSCALE_API_BASE")
             api_base = "https://api.endpoints.anyscale.com/v1"
             token = vectara_token 
@@ -133,12 +139,12 @@ class MaverickChatbot:
 
             response = s.post(url, headers={"Authorization": f"Bearer {token}"}, json=body)
 
-            error_response = ""
+            madeitthisfar = "after LLM call"
             if response.status_code == 200:
                 response_json = response.json()
                 chatbot_response = response_json["choices"][0]["message"]["content"]
                 #print("Chatbot Response:")
-                error_response = chatbot_response
+                madeitthisfar = "after LLM call" + chatbot_response
                 return chatbot_response
             else:
                 return f"4th -- Request failed with status code: {response.status_code}"
@@ -146,4 +152,4 @@ class MaverickChatbot:
 
             
         except:
-            return f"EXCEPTION - No response available at this time response-code = {response.status_code}"
+            return f"EXCEPTION - No response available at this time - how far in the code are we = {madeitthisfar}"
