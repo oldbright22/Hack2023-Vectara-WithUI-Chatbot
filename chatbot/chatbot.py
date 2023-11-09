@@ -19,7 +19,11 @@ import requests
 from dotenv import find_dotenv, load_dotenv
 import streamlit as st
 
-
+customer_id = st.secrets("CUSTOMER_ID")
+x_api_key = st.secrets("VECTARA_API_KEY")
+customerid = st.secrets("CUSTOMERID")
+vectara_token = st.secrets("TOKEN")
+corpusid = st.secrets("CORPUSID")            
 
 class MaverickChatbot:
     
@@ -41,13 +45,7 @@ class MaverickChatbot:
             #customerid = os.getenv("CUSTOMERID")
             #vectara_token = os.getenv("TOKEN")
             #corpusid = os.getenv("CORPUSID")
-
-            customer_id = st.secrets("CUSTOMER_ID")
-            x_api_key = st.secrets("VECTARA_API_KEY")
-            customerid = st.secrets("CUSTOMERID")
-            vectara_token = st.secrets("TOKEN")
-            corpusid = st.secrets("CORPUSID")            
-            
+           
             url = 'https://api.vectara.io/v1/query'
 
 
