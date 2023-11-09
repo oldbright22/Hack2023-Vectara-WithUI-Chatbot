@@ -25,12 +25,6 @@ class MaverickChatbot:
     
     def __init__(self):
         load_dotenv(find_dotenv())
-    #   self.embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
-
-    #def get_db_maverick(_self):
-    #    index_name=PINECONE_INDEX
-    #    db = Pinecone.from_existing_index(index_name, _self.embeddings)
-    #    return db
 
     @st.cache_data(show_spinner=False)
     def get_response_from_query(_self, query):
@@ -124,7 +118,6 @@ class MaverickChatbot:
                 #print(f"Request failed with status code: {response.status_code}")
 
 
-
             s = requests.Session()
 
             #api_base = os.getenv("ANYSCALE_API_BASE")
@@ -143,8 +136,8 @@ class MaverickChatbot:
             if response.status_code == 200:
                 response_json = response.json()
                 chatbot_response = response_json["choices"][0]["message"]["content"]
-                #print("Chatbot Response:")
-                #print(chatbot_response)
+                print("Chatbot Response:")
+                print(chatbot_response)
             else:
                 return f"4th -- Request failed with status code: {response.status_code}"
                 #print(f"Request failed with status code: {response.status_code}")
