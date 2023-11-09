@@ -112,10 +112,10 @@ class MaverickChatbot:
         
             madeitthisfar = "prior to api call - vectara"
             #Perform API call - POST towards  VECTARA DB  
-            response1 = requests.post(url, headers=headers, json=data)
+            response = requests.post(url, headers=headers, json=data)
 
-            madeitthisfar = "after to api call - vectara"
-            if response1.status_code == 200:
+            madeitthisfar = "after to api call - vectara {response.status_code}"
+            if response.status_code == 200:
                 response_json = response.json()
 
                 # Check if results are available
