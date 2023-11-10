@@ -2,7 +2,7 @@
 
 Colo Companion is an AI-powered chatbot for providing colorectal health support.
 
-
+[Colo Companion logo](data/OIG.jpeg)
 
 ## Problem Statement
 
@@ -53,7 +53,7 @@ Colo Companion is an AI-powered chatbot for providing colorectal health support.
 ## Demo
 A demo of the chatbot can be found here:
 
-https://hack2023-vectara-withui-chatbot-k9uuqkefecwmsmgdvspbes.streamlit.app/
+[Colo Companion demo](https://hack2023-vectara-withui-chatbot-k9uuqkefecwmsmgdvspbes.streamlit.app/)
 
 ## Installation
 
