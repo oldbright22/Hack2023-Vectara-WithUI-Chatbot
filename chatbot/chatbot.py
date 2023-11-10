@@ -20,6 +20,7 @@ class MaverickChatbot:
 
 
             madeitthisfar = "begin"
+
             CUSTOMER_ID = st.secrets["CUSTOMER_ID"]
             X_API_KEY = st.secrets["X_API_KEY"]
             CUSTOMERID = st.secrets["CUSTOMERID"]
