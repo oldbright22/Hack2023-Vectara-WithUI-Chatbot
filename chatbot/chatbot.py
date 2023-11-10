@@ -2,20 +2,6 @@
 import os
 import requests
 
-#from langchain.embeddings.openai import OpenAIEmbeddings
-#from langchain.chat_models import ChatOpenAI
-#from langchain.llms import HuggingFaceHub
-#from langchain.vectorstores import Pinecone
-#from langchain.chains import LLMChain
-
-#from langchain.prompts.chat import (
-#    ChatPromptTemplate,
-#    SystemMessagePromptTemplate,
-#    HumanMessagePromptTemplate,
-#)
-
-#from getpass import getpass
-
 from dotenv import find_dotenv, load_dotenv
 import streamlit as st
 
@@ -34,30 +20,11 @@ class MaverickChatbot:
 
 
             madeitthisfar = "begin"
-            # Get the values from environment variables
-            #customer_id = os.getenv("CUSTOMER_ID")
-            #x_api_key = os.getenv("VECTARA_API_KEY")
-            #customerid = os.getenv("CUSTOMERID")
-            #vectara_token = os.getenv("TOKEN")
-            #corpusid = os.getenv("CORPUSID")
-
-            #madeitthisfar = f"(1) {st.secrets("CUSTOMER_ID")} "
-            #madeitthisfar = f"(2) {st.secrets("X_API_KEY")} " 
-            #madeitthisfar = f"(3) {st.secrets("CUSTOMERID")} "
-            #madeitthisfar = f"(4) {st.secrets("VTOKEN")} " 
-            #madeitthisfar = f"(5) {st.secrets("CORPUSID")} "
-
-            #CUSTOMER_ID = st.secrets("CUSTOMER_ID")
-            #X_API_KEY = st.secrets("X_API_KEY")
-            #CUSTOMERID = st.secrets("CUSTOMERID")
-            #VTOKEN = st.secrets("VTOKEN")
-            #CORPUSID = st.secrets("CORPUSID")    
-
-            CUSTOMER_ID='1504889343'
-            X_API_KEY='zwt_WbLJ_75_cAIQMVUwidldtQ719dm81pKdkMWn2A'
-            CUSTOMERID=1504889343
-            VTOKEN='esecret_4fvbprd1pf4t1fziay6fpz1elg'
-            CORPUSID=2        
+            CUSTOMER_ID = st.secrets["CUSTOMER_ID"]
+            X_API_KEY = st.secrets["X_API_KEY"]
+            CUSTOMERID = st.secrets["CUSTOMERID"]
+            VTOKEN = st.secrets["VTOKEN"]
+            CORPUSID = st.secrets["CORPUSID"]    
 
             madeitthisfar = f"(1){CUSTOMER_ID} (2) {X_API_KEY} (3) {CUSTOMERID} (4) {VTOKEN} (5) {CORPUSID} "
 
